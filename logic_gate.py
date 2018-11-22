@@ -1,3 +1,4 @@
+"""http://interactivepython.org/runestone/static/pythonds/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html"""
 class LogicGate:
 
     def __init__(self,n):

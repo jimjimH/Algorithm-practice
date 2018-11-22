@@ -1,3 +1,4 @@
+"""http://interactivepython.org/runestone/static/pythonds/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html"""
 def gcd(m,n):
     while m%n != 0:
         oldm=m
@@ -9,7 +10,8 @@ class Fraction:
     def __init__(self,top,bottom):
         self.num=top
         self.den=bottom
-    def __str__(self):
+    def __str__(self): 
+        #the method to convert an object into a string, to show the fraction
         return str(self.num)+"/"+str(self.den)
     def __eq__(self, other):
         firstnum=self.num*other.den

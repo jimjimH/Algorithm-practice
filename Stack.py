@@ -1,5 +1,5 @@
-from pythonds.basic.stack import Stack
-class Stack:
+#from pythonds.basic.stack import Stack
+class Stack():
     def __init__(self):
         self.items = []
 
