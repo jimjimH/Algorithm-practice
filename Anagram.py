@@ -1,8 +1,8 @@
-#from web: http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/AnAnagramDetectionExample.html
+# from web: http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/AnAnagramDetectionExample.html
 
-def anagramSolution4(s1,s2):
-    c1= [0]*26
-    c2= [0]*26
+def anagramSolution4(s1, s2):
+    c1 = [0]*26
+    c2 = [0]*26
 
     for i in range(len(s1)):
         pos = ord(s1[i])-ord('a')
@@ -11,14 +11,14 @@ def anagramSolution4(s1,s2):
         pos = ord(s2[i])-ord('a')
         c2[pos] = c2[pos] + 1
 
-    j =0
+    j = 0
     stillOK = True
-    while j<26 and stillOK:
+    while j < 26 and stillOK:
         if c1[j] == c2[j]:
             j = j + 1
         else:
             stillOK = False
     return stillOK
-    
-print(anagramSolution4('apple','pleap'))
-    
+
+
+print(anagramSolution4('apple', 'pleap'))
