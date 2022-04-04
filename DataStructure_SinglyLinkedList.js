@@ -5,7 +5,7 @@
 //     }
 // }
 
-class LinkedList {
+class SinglyLinkedList {
     constructor(value) {
         this.head = {
             value,
@@ -116,16 +116,36 @@ class LinkedList {
         this.length--;
         return this.printList();
     }
+
+    reverse() {
+        if (!this.head.next) {
+            return this.printList();
+        }
+
+        let first = this.head;
+        let second = first.next;
+        while (second !== null) {
+            const temp = second.next;
+            second.next = first;
+            first = second;
+            second = temp;
+        }
+        this.tail = this.head;
+        this.tail.next = null;
+
+        this.head = first;
+    }
 }
 
 // 1-->10-->99-->5-->16
-const myLinkedList = new LinkedList(10);
+const myLinkedList = new SinglyLinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
 myLinkedList.insert(0, 9);
 myLinkedList.remove(0);
+myLinkedList.reverse();
 
 console.log(myLinkedList.printList())
 console.dir(myLinkedList, { colors: true, depth: null });
